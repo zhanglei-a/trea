@@ -15,10 +15,11 @@ static void WriteUint32(std::vector<uint8_t>& buf, uint32_t val) {
                reinterpret_cast<uint8_t*>(&n) + 4);
 }
 
-static uint32_t ReadUint32(const std::vector<uint8_t>& buf, size_t offset) {
+static uint32_t ReadUint32(const std::vector<uint8_t>& buf, size_t& offset) {
     if (offset + 4 > buf.size()) return 0;
     uint32_t n;
     memcpy(&n, buf.data() + offset, 4);
+    offset += 4;
     return ntohl(n);
 }
 
@@ -29,8 +30,7 @@ static void WriteString(std::vector<uint8_t>& buf, const std::string& s) {
 }
 
 static std::string ReadString(const std::vector<uint8_t>& buf, size_t& offset) {
-    uint32_t len = ReadUint32(buf, offset);
-    offset += 4;
+    uint32_t len = ReadUint32(buf, offset);  // offset += 4 inside
     if (offset + len > buf.size()) return "";
     std::string s(reinterpret_cast<const char*>(buf.data() + offset), len);
     offset += len;

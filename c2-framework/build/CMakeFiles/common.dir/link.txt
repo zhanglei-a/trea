@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcommon.a CMakeFiles/common.dir/common/common.cpp.o CMakeFiles/common.dir/common/crypto.cpp.o CMakeFiles/common.dir/common/protocol.cpp.o
+/usr/bin/ranlib libcommon.a

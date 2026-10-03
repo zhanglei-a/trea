@@ -1,0 +1,5 @@
+/workspace/c2-framework/build/CMakeFiles/common.dir
+/workspace/c2-framework/build/CMakeFiles/server.dir
+/workspace/c2-framework/build/CMakeFiles/beacon.dir
+/workspace/c2-framework/build/CMakeFiles/edit_cache.dir
+/workspace/c2-framework/build/CMakeFiles/rebuild_cache.dir

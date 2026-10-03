@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/beacon.dir/beacon/beacon.cpp.o -o beacon  libcommon.a -lpthread 
